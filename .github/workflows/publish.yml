@@ -3,7 +3,7 @@ name: Build and Deploy Docker Image
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "v*.*.*"
 
 env:
   IMAGE_NAME: nowruz
@@ -18,8 +18,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '21'
-          cache: 'npm'
+          node-version: "21"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
@@ -27,7 +27,7 @@ jobs:
       - name: Build Next.js application
         env:
           NODE_ENV: production
-          NEXT_TELEMETRY_DISABLED: '1'
+          NEXT_TELEMETRY_DISABLED: "1"
           CDN_URL: ${{ vars.CDN_URL }}/${{ github.ref_name }}
           ASSETS_HOSTNAME: ${{ vars.ASSETS_HOSTNAME }}
           BASE_PATH: ${{ vars.BASE_PATH }}
@@ -35,6 +35,9 @@ jobs:
           NEXT_PUBLIC_API_BASE_URL: ${{ vars.NEXT_PUBLIC_API_BASE_URL }}
           NEXT_PUBLIC_API_BASE_PATH: ${{ vars.NEXT_PUBLIC_API_BASE_PATH }}
         run: npm run build
+
+      - name: copy public
+        run: cp -r public .next/standalone/
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
