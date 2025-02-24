@@ -1,0 +1,86 @@
+name: Build and Deploy Docker Image
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+env:
+  IMAGE_NAME: nowruz
+
+jobs:
+  build-and-publish-image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '21'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build Next.js application
+        env:
+          NODE_ENV: production
+          NEXT_TELEMETRY_DISABLED: '1'
+          CDN_URL: ${{ vars.CDN_URL }}/${{ github.ref_name }}
+          ASSETS_HOSTNAME: ${{ vars.ASSETS_HOSTNAME }}
+          BASE_PATH: ${{ vars.BASE_PATH }}
+          NEXT_PUBLIC_ASSETS_URL: ${{ vars.NEXT_PUBLIC_ASSETS_URL }}
+          NEXT_PUBLIC_API_BASE_URL: ${{ vars.NEXT_PUBLIC_API_BASE_URL }}
+          NEXT_PUBLIC_API_BASE_PATH: ${{ vars.NEXT_PUBLIC_API_BASE_PATH }}
+        run: npm run build
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+        with:
+          install: true
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.ref_name }}
+
+      - name: Install rclone
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rclone
+
+      - name: Config Rclone
+        env:
+          RCLONE_CONFIG_S3_TYPE: s3
+          RCLONE_CONFIG_S3_ACCESS_KEY_ID: ${{ secrets.S3_ACCESS_KEY_ID }}
+          RCLONE_CONFIG_S3_SECRET_ACCESS_KEY: ${{ secrets.S3_SECRET_KEY }}
+          RCLONE_CONFIG_S3_REGION: us-west-2
+          RCLONE_CONFIG_S3_ENDPOINT: ${{ vars.S3_ENDPOINT }}
+        run: |
+          mkdir -p ~/.config/rclone
+          touch ~/.config/rclone/rclone.conf
+          echo "[s3]" > ~/.config/rclone/rclone.conf
+          echo "type = s3" >> ~/.config/rclone/rclone.conf
+          echo "provider = Other" >> ~/.config/rclone/rclone.conf
+          echo "env_auth = false" >> ~/.config/rclone/rclone.conf
+          echo "access_key_id = ${{ secrets.S3_ACCESS_KEY_ID }}" >> ~/.config/rclone/rclone.conf
+          echo "secret_access_key = ${{ secrets.S3_SECRET_KEY }}" >> ~/.config/rclone/rclone.conf
+          echo "region = us-west-2" >> ~/.config/rclone/rclone.conf
+          echo "endpoint = ${{ vars.S3_ENDPOINT }}" >> ~/.config/rclone/rclone.conf
+
+      - name: Upload .next/static to S3 with Rclone
+        run: |
+          rclone copy ./.next/static s3:${{ vars.S3_ASSETS_BUCKET }}/${{ env.IMAGE_NAME }}/${{ github.ref_name }}/_next/static --s3-acl public-read
