@@ -2,6 +2,8 @@ import VectorFishTank from "@/vectors/fish-tank";
 import React from "react";
 
 export default function page() {
+  const commonClasses = "h-10 w-10 rounded-full border-b-2 shadow-[inset_3px_3px_4px_0px_#FFFFFF26,inset_0px_-1px_4px_0px_#00000026]";
+
   return (
     <div className="flex flex-col items-center justify-center gap-10 bg-[url('/watercolor-bg2.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <section className="flex flex-col items-center justify-center gap-10 px-[34px]">
@@ -19,20 +21,20 @@ export default function page() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#F26C63]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#FDD849]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#DCC4DE]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-          <div className="h-10 w-10 rounded-full border-b-2 bg-[#AAD59F]"></div>
-        </div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#F26C63]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#FDD849]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#DCC4DE]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+            <div className={`${commonClasses} bg-[#AAD59F]`}></div>
+          </div>
       </section>
     </div>
   );

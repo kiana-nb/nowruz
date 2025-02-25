@@ -3,7 +3,7 @@ import React from "react";
 
 export default function BannerCard() {
   return (
-    <section className=" bg-[url('/cyan-dots-bg.svg')] min-h-[200px] relative rounded-[20px] p-4 flex overflow-hidden">
+    <section className=" bg-[url('/cyan-dots-bg.svg')] bg-no-repeat bg-cover min-h-[200px] relative rounded-[40px] p-4 flex overflow-hidden">
       <div className="flex flex-col">
         <Image alt="" src="/branches.svg" className="min-w-[115px] -mr-10 -mt-10" width={115} height={55} />
         <Image alt="" src="/fish.svg" className="-mt-4" width={70} height={55} />
