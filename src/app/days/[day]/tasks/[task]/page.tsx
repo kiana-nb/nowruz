@@ -1,31 +1,34 @@
-import VectorEggShells from "@/vectors/egg-shells";
-import Image from "next/image";
-import { FinishModal } from "./finish-modal";
+import React from "react";
+import Eggs from "./_components/eggs";
+import Mirror from "./_components/mirror";
+import Nuts from "./_components/nuts";
+import Senjed from "./_components/senjed";
+import Sumac from "./_components/sumac";
+import Acid from "./_components/acid";
+import Apple from "./_components/apple";
+import Book from "./_components/book";
+import Coins from "./_components/coins";
+import Grass from "./_components/grass";
+import HyacinthFlower from "./_components/hyacinth-flower";
+import Garlic from "./_components/garlic";
 
-export default function page() {
+function page() {
   return (
-    <div className="bg-[url('/watercolor-bg1.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
-      <div className="overflow-y-scroll h-full w-full px-5 py-10 gap-20 flex flex-col items-center justify-center">
-        <div className="relative">
-          <VectorEggShells />
-          <div className="absolute top-1/2 -ml-4 w-[200px] -translate-y-[70px] text-sm font-[600] left-1/2 -translate-x-1/2 text-[#744C3D] bg-white p-3 rounded-lg flex items-center justify-center">
-            میدونی ترکیب رنگ زرد و قرمز چه رنگی میشه؟ رنگ رو انتخابش کن
-          </div>
-          <div className="absolute top-1/2 -ml-4 min-w-[200px] translate-y-[40px] text-sm font-[600] left-1/2 -translate-x-1/2 text-white flex gap-2 p-3 rounded-lg  items-center justify-center">
-            <FinishModal>
-              <div className="rounded-lg bg-orange-600 px-4 py-2 w-[50px] flex items-center justify-center h-full">نارنجی</div>
-            </FinishModal>
-            <FinishModal>
-              <div className="rounded-lg bg-purple-600 px-4 py-2 w-[50px] flex items-center justify-center h-full">بنفش</div>
-            </FinishModal>
-            <FinishModal>
-              <div className="rounded-lg bg-yellow-600 px-4 py-2 w-[50px] flex items-center justify-center h-full">زرد</div>
-             </FinishModal>
-          </div>
-        </div>
-      </div>
-
-      <Image src="/eggs.svg" alt="" width={200} height={100} className="absolute bottom-2 left-2" />
+    <div>
+      <Eggs />
+      <Mirror />
+      <Nuts />
+      <Garlic />
+      <Senjed />
+      <Sumac />
+      <Acid />
+      <Apple />
+      <Book />
+      <Coins />
+      <Grass />
+      <HyacinthFlower />
     </div>
   );
 }
+
+export default page;
