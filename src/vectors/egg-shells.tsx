@@ -1,8 +1,15 @@
 import React, { SVGProps } from "react";
 
-export default function VectorEggShells(props : SVGProps<SVGSVGElement>) {
+export default function VectorEggShells(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg  {...props} width="299" height="558" viewBox="0 0 299 558" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      {...props}
+      width="299"
+      height="558"
+      viewBox="0 0 299 558"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         opacity="0.2"
         d="M150.29 557.6C232.326 557.6 298.83 519.204 298.83 471.84C298.83 424.477 232.326 386.081 150.29 386.081C68.2529 386.081 1.74902 424.477 1.74902 471.84C1.74902 519.204 68.2529 557.6 150.29 557.6Z"
@@ -48,9 +55,18 @@ export default function VectorEggShells(props : SVGProps<SVGSVGElement>) {
         d="M237.111 452.677C244.121 448.624 250.224 444.272 255.426 439.673C238.017 486.734 192.761 520.269 139.654 520.269C88.2414 520.269 44.1675 488.787 25.6621 444.052C29.5759 447.065 33.9015 449.939 38.636 452.677C93.4439 484.322 182.306 484.322 237.111 452.677Z"
         fill="#F9CF9F"
       />
-      <path d="M251.385 487.427L272.912 475.096L275.925 493.575L251.385 487.427Z" fill="#EFCDA9" />
-      <path d="M275.831 441.907L298.83 453.311L271.819 457.915L252.766 456.386L275.831 441.907Z" fill="#EFCDA9" />
-      <path d="M281.605 418.869L284.707 428.027L273.748 429.191L281.605 418.869Z" fill="#EFCDA9" />
+      <path
+        d="M251.385 487.427L272.912 475.096L275.925 493.575L251.385 487.427Z"
+        fill="#EFCDA9"
+      />
+      <path
+        d="M275.831 441.907L298.83 453.311L271.819 457.915L252.766 456.386L275.831 441.907Z"
+        fill="#EFCDA9"
+      />
+      <path
+        d="M281.605 418.869L284.707 428.027L273.748 429.191L281.605 418.869Z"
+        fill="#EFCDA9"
+      />
       <path
         d="M66.7835 60.6183C83.2167 38.151 103.3 22.5204 125.998 20.5566C172.935 16.522 218.797 71.8913 244.532 128.879C205.164 82.3082 126.775 52.0774 66.7835 60.6183Z"
         fill="#F9CF9F"
@@ -77,7 +93,7 @@ export default function VectorEggShells(props : SVGProps<SVGSVGElement>) {
           gradientTransform="translate(150.29 471.84) rotate(30.0007) scale(121.282 105.035)"
         >
           <stop />
-          <stop offset="1" stop-color="white" />
+          <stop offset="1" stopColor="white" />
         </radialGradient>
       </defs>
     </svg>

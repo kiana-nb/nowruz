@@ -100,8 +100,8 @@ export default function VectorApple() {
           y2="18.7258"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#854A22" />
-          <stop offset="0.145" stop-color="#48A118" />
+          <stop stopColor="#854A22" />
+          <stop offset="0.145" stopColor="#48A118" />
         </linearGradient>
       </defs>
     </svg>
