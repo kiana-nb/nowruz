@@ -347,9 +347,9 @@ export default function VectorFish() {
       />
       <defs>
         <linearGradient id="paint0_linear_87_68447" x1="148.544" y1="27.714" x2="154.995" y2="22.1877" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#EAA210" />
-          <stop offset="0.5293" stop-color="#FFCA21" />
-          <stop offset="1" stop-color="#EAA210" />
+          <stop stopColor="#EAA210" />
+          <stop offset="0.5293" stopColor="#FFCA21" />
+          <stop offset="1" stopColor="#EAA210" />
         </linearGradient>
       </defs>
     </svg>
