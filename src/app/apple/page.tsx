@@ -25,9 +25,9 @@ export default function page() {
       <Image
         src="/apple-ring.svg"
         alt=""
-        width={350}
+        width={300}
         height={200}
-        className="absolute top-5 left-1/2 -translate-x-1/2"
+        className="absolute top-7 left-1/2 -translate-x-1/2"
       />
     </div>
   );
