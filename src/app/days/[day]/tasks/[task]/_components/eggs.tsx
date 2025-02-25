@@ -2,10 +2,17 @@ import VectorEggShells from "@/vectors/egg-shells";
 import React from "react";
 import { FinishModal } from "./finish-modal";
 import Image from "next/image";
+import BackButton from "@/components/back-button";
+import ProgressBar from "../../_components/progress-bar";
+import TinyFish from "@/vectors/tiny-fish";
 
 export default function Eggs() {
   return (
     <div className="bg-[url('/watercolor-bg1.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
+      <div className="absolute right-4 top-4 flex gap-4 items-center">
+        <BackButton />
+        <ProgressBar className="bg-[#FAC821] border-[#F19C25]" icon={<TinyFish/>} progress={50}/>
+      </div>
       <div className="overflow-y-scroll h-full w-full px-5 py-10 gap-20 flex flex-col items-center justify-center">
         <div className="relative">
           <VectorEggShells />

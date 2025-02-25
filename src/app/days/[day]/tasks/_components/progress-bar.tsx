@@ -8,7 +8,7 @@ interface ProgressBarProps {
 
 export default function ProgressBar({ progress, className, icon }: ProgressBarProps) {
   return (
-    <div className="relative w-full max-w-[210px]">
+    <div className="relative w-full min-w-[210px] max-w-[210px]">
       {/* Progress Bar Background */}
       <div className="w-full h-6 bg-white border-b-2 border-[#C1C1C1] rounded-full shadow-inner" />
 
