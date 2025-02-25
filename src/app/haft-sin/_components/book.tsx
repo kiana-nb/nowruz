@@ -1,7 +1,7 @@
 import Vectorpaper from "@/vectors/paper";
 import Image from "next/image";
 
-export default function page() {
+export default function Book() {
   return (
     <div className="bg-[url('/watercolor-bg2.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <div className="overflow-y-scroll h-full w-full px-5 py-10 gap-20 flex flex-col items-center justify-center">
