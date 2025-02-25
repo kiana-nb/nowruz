@@ -1,8 +1,8 @@
-import React from "react";
+import React, { SVGProps } from "react";
 
-export default function VectorRouletteWheel() {
+export default function VectorRouletteWheel(props:SVGProps<SVGSVGElement>) {
   return (
-    <svg width="359" height="359" viewBox="0 0 359 359" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} width="359" height="359" viewBox="0 0 359 359" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M298.766 228.229C289.84 249.993 275.17 268.912 256.329 282.952L179.278 179.04L298.766 228.229Z" fill="#CFCFCF" />
       <path d="M191.958 307.632C168.551 309.972 144.959 305.903 123.716 295.862L179.278 179.04L191.958 307.632Z" fill="#316443" />
       <path d="M123.968 295.82C102.695 285.78 84.5619 270.149 71.516 250.607L179.278 179.04L123.968 295.82Z" fill="#F19C25" />
