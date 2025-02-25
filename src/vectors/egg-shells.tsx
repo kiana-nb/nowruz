@@ -77,7 +77,7 @@ export default function VectorEggShells(props : SVGProps<SVGSVGElement>) {
           gradientTransform="translate(150.29 471.84) rotate(30.0007) scale(121.282 105.035)"
         >
           <stop />
-          <stop offset="1" stop-color="white" />
+          <stop offset="1" stopColor="white" />
         </radialGradient>
       </defs>
     </svg>
