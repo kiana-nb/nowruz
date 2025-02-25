@@ -1,8 +1,8 @@
 export default function VectorApple() {
   return (
     <svg
-      width="132"
-      height="155"
+      width="110"
+      height="110"
       viewBox="0 0 132 155"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

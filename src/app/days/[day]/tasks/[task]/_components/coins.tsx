@@ -18,8 +18,8 @@ export default function Coins() {
       <Image
         src="/coins-bag.svg"
         alt=""
-        width={150}
-        height={70}
+        width={200}
+        height={100}
         className="absolute bottom-2 left-1/2 -translate-x-1/2"
       />
     </div>

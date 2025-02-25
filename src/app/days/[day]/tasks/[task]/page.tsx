@@ -17,7 +17,6 @@ function page() {
     <div>
       <Eggs />
       <Mirror />
-      <Nuts />
       <Garlic />
       <Senjed />
       <Sumac />
@@ -26,6 +25,7 @@ function page() {
       <Book />
       <Coins />
       <Grass />
+      <Nuts />
       <HyacinthFlower />
     </div>
   );

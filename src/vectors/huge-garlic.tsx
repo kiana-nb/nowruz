@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { SVGProps } from "react";
 
-export default function VectorHugeGarlic() {
+export default function VectorHugeGarlic(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg width="113" height="126" viewBox="0 0 113 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props } width="113" height="126" viewBox="0 0 113 126" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M68.5 126C89.763 126 107 119.956 107 112.5C107 105.044 89.763 99 68.5 99C47.237 99 30 105.044 30 112.5C30 119.956 47.237 126 68.5 126Z"
         fill="url(#paint0_radial_68_409)"
