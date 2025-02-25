@@ -2,7 +2,14 @@ import React, { SVGProps } from "react";
 
 export default function VectorFlower(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg {...props} width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      {...props}
+      width="38"
+      height="36"
+      viewBox="0 0 38 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
