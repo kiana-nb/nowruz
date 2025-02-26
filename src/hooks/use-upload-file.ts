@@ -1,17 +1,32 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-export const useUploadFile = (accept: string, onFileSelected: (file: File) => void) => {
+type FilePreview = {
+  file: File;
+  previewUrl: string | null;
+  type: "image" | "video" | "other";
+};
+
+export const useUploadFile = () => {
   const inputRef = useRef<HTMLInputElement>(null);
+  const [files, setFiles] = useState<FilePreview[]>([]);
 
   const openFileDialog = () => {
-    if (inputRef.current) {
-      inputRef.current.click();
-    }
+    inputRef.current?.click();
   };
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
-      onFileSelected(event.target.files[0]);
+      const newFiles = Array.from(event.target.files).map((file): FilePreview => ({
+        file,
+        previewUrl: file.type.startsWith("image/") || file.type.startsWith("video/") ? URL.createObjectURL(file) : null,
+        type: file.type.startsWith("image/")
+          ? "image"
+          : file.type.startsWith("video/")
+          ? "video"
+          : "other",
+      }));
+
+      setFiles((prevFiles) => [...prevFiles, ...newFiles]);
     }
   };
 
@@ -19,6 +34,6 @@ export const useUploadFile = (accept: string, onFileSelected: (file: File) => vo
     inputRef,
     openFileDialog,
     handleFileChange,
-    accept,
+    files, // List of files with their preview and type
   };
 };
