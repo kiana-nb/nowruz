@@ -18,8 +18,8 @@ export default function MahiP1() {
         />
       </div>
       <section className="flex flex-col gap-5 items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20 ">
-        <div className="p-4 w-full items-center text-sm font-[600] text-[#DC8D1D] bg-white rounded-[20px] flex gap-x-2">
-          <div className="bg-[#FAC821] rounded-full p-2">
+        <div className="p-4 w-full items-center text-sm font-[600] text-[#DC8D1D] bg-white rounded-[28px] flex gap-x-2 border-b-2 border-[#C1C1C1] shadow-[3px_2px_15px_0px_#00000026]">
+          <div className="w-[44px] min-w-[46px] flex justify-center items-center rounded-[20px] h-[46px] bg-[#FAC821] border-b-[3px] border-[#F19C25] text-white shadow-inner shadow-white/40">
             <IconSeda />
           </div>
           <p>میتونی برامون یه شعر از بهار بخونی؟</p>
