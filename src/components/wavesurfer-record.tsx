@@ -83,7 +83,7 @@ class WaveSurferAudioRecord extends Component<MyProps> {
           {this.state.playing ? <IconPause/> : <IconPlay/>}
         </div>
 
-        <div dir="ltr" className="flex-grow overflow-hidden text-center" id={`${this.props.selector}`}></div>
+        <div dir="ltr" className="flex-grow max-w-[175px] overflow-hidden text-center" id={`${this.props.selector}`}></div>
 
         {this.props?.duration && (
           <div className="text-xs hidden text-white font-light justify-start w-max h-full mt-0.5 items-center mr-3">
