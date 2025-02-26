@@ -12,10 +12,12 @@ import Grass from "./_components/grass";
 import HyacinthFlower from "./_components/hyacinth-flower";
 import Garlic from "./_components/garlic";
 import FishTank from "./_components/fish-tank";
+import MahiP1 from "./_components/mahi-p1";
 
 function page() {
   return (
     <div>
+      <MahiP1 />
       <FishTank />
       <Eggs />
       <Mirror />
