@@ -11,12 +11,12 @@ import Coins from "./_components/coins";
 import Grass from "./_components/grass";
 import HyacinthFlower from "./_components/hyacinth-flower";
 import Garlic from "./_components/garlic";
-import New from "./_components/new";
+import FishTank from "./_components/fish-tank";
 
 function page() {
   return (
     <div>
-      <New />
+      <FishTank />
       <Eggs />
       <Mirror />
       <Garlic />
