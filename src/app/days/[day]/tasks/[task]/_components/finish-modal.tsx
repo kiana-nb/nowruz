@@ -1,43 +1,26 @@
 "use client";
 
+import { useModal } from "@/hooks/use-modal-hook";
 import VectorFish from "@/vectors/fish";
-import { useEffect, useRef, ReactNode, useState } from "react";
-import { createPortal } from "react-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { ReactNode } from "react";
+import { createPortal } from "react-dom";
 
 interface ModalProps {
   children: ReactNode;
 }
 
 export const FinishModal = ({ children }: ModalProps) => {
-  const modalRef = useRef<HTMLDivElement>(null);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const { modalRef, isOpen, setIsOpen } = useModal<HTMLDivElement>();
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-        setIsModalOpen(false);
-      }
-    };
-
-    if (isModalOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      document.body.style.overflow = "hidden";
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-      document.body.style.overflow = "auto";
-    };
-  }, [isModalOpen]);
 
   return (
     <>
-      <div onClick={() => setIsModalOpen(true)}>{children}</div>
+      <div onClick={() => setIsOpen(true)}>{children}</div>
       {createPortal(
         <AnimatePresence>
-          {isModalOpen && (
+          {isOpen && (
             <motion.div
               className="fixed inset-0 z-50 flex items-center justify-center"
               initial={{ opacity: 0 }}
