@@ -6,7 +6,7 @@ import TinyFish from "@/vectors/tiny-fish";
 export default function Mirror() {
   return (
     <div className="bg-[url('/watercolor-bg1.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
-      <div className=" flex w-full p-4 gap-x-4 items-center">
+      <div className="absolute right-4 top-4 flex gap-4 items-center">
         <BackButton />
         <ProgressBar
           className="bg-[#FAC821] border-[#F19C25]"
@@ -22,7 +22,7 @@ export default function Mirror() {
         height={200}
         className="mx-auto mb-3"
       />
-      <div className=" px-5 gap-10 flex flex-col items-center">
+      <section className="flex flex-col gap-5 items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20 ">
         <div className="flex flex-col justify-center items-center gap-6 ">
           <div className="bg-[#FAFFB2] h-32 min-w-72  rounded-[21px]"></div>
           <div className="flex flex-col gap-3">
@@ -30,7 +30,7 @@ export default function Mirror() {
             <div className="bg-[#FAFFB2] h-10 w-72 p-4 rounded-[21px]"></div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

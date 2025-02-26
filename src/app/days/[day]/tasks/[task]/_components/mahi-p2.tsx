@@ -16,7 +16,7 @@ export default function MahiP2() {
           progress={50}
         />
       </div>
-      <section className="flex flex-col gap-5  items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20">
+      <section className="flex flex-col gap-5 items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20 ">
         <div className="p-4 w-full items-center text-sm font-[600] text-[#DC8D1D] bg-white rounded-[20px] flex gap-x-2">
           <div className="bg-[#FAC821] rounded-full p-2">
             <IconSeda />

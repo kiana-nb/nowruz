@@ -1,9 +1,10 @@
 import BackButton from "@/components/back-button";
+import FileAttachment from "@/components/file-attachment";
+import IconSeda from "@/icons/icon-seda";
 import VectorBranchOfFlower from "@/vectors/branch-of-flower";
+import TinyFish from "@/vectors/tiny-fish";
 import Image from "next/image";
 import ProgressBar from "../../_components/progress-bar";
-import TinyFish from "@/vectors/tiny-fish";
-import IconSeda from "@/icons/icon-seda";
 
 export default function MahiP1() {
   return (
@@ -16,7 +17,7 @@ export default function MahiP1() {
           progress={50}
         />
       </div>
-      <section className="flex flex-col gap-5  items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20">
+      <section className="flex flex-col gap-5 items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20 ">
         <div className="p-4 w-full items-center text-sm font-[600] text-[#DC8D1D] bg-white rounded-[20px] flex gap-x-2">
           <div className="bg-[#FAC821] rounded-full p-2">
             <IconSeda />
@@ -25,12 +26,8 @@ export default function MahiP1() {
         </div>
         <div className="p-4 w-full  gap-2 items-center text-sm font-[600] shadow bg-white rounded-[20px] flex flex-col ">
           <div className="bg-[#45B4DB4D] w-full min-h-28 rounded-[28px]"></div>
-
           <div className="w-full flex items-center justify-end">
-            <button className="flex items-center bg-[#FAC821] rounded-[19px] text-white p-2">
-              <p>ارسال فایل</p>
-              <IconSeda />
-            </button>
+            <FileAttachment />
           </div>
         </div>
       </section>

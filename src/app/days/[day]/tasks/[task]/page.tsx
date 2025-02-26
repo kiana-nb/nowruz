@@ -13,11 +13,13 @@ import HyacinthFlower from "./_components/hyacinth-flower";
 import Garlic from "./_components/garlic";
 import FishTank from "./_components/fish-tank";
 import MahiP1 from "./_components/mahi-p1";
+import MahiP2 from "./_components/mahi-p2";
 
 function page() {
   return (
     <div>
       <MahiP1 />
+      <MahiP2 />
       <FishTank />
       <Eggs />
       <Mirror />
