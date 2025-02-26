@@ -5,7 +5,7 @@ import TinyFish from "@/vectors/tiny-fish";
 
 export default function Acid() {
   return (
-    <div className="bg-[url('/watercolor-bg1.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
+    <div className="bg-[url('/watercolor-bg1.svg')] w-full min-h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <div className="absolute right-4 top-4 flex gap-4 items-center">
         <BackButton />
         <ProgressBar
