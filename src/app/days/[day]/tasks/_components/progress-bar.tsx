@@ -24,7 +24,7 @@ export default function ProgressBar({ progress, className, icon }: ProgressBarPr
         className={`
           absolute top-1/2 shadow-inner mr-4 -translate-y-1/2 rounded-full w-10 h-10 !bg-white flex items-center justify-center text-white text-lg border-b-4
           ${className}
-          ${progress > 90 && "-mr-2"}
+          ${progress > 90 && "-mr-4"}
           
         `}
         style={{ right: `calc(${progress}% - 20px)` }} // Adjust icon position
