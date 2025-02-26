@@ -8,29 +8,25 @@ export default function Book() {
   return (
     <div className="bg-[url('/watercolor-bg2.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <div className="absolute right-4 top-4 flex gap-4 items-center">
-              <BackButton />
-              <ProgressBar className="bg-[#FAC821] border-[#F19C25]" icon={<TinyFish/>} progress={50}/>
-            </div>
-      <div className="h-full w-full px-5 py-10 flex flex-col items-center justify-center relative">
-        <div className="absolute top-[190px]  left-1/2 transform -translate-x-1/2 z-10 w-[200px] text-sm font-[600] text-white p-3 rounded-lg flex items-center justify-center">
-          میدونی ترکیب رنگ زرد و قرمز چه رنگی میشه؟ رنگ رو انتخابش کن
-        </div>
-
-        <div className="absolute top-2/3 grid grid-cols-1 gap-4 my-1">
-          <div className="flex flex-row gap-6">
-            <Vectorpaper />
-            <Vectorpaper />
-          </div>
-        </div>
-
-        <Image
-          src="/book-sky.svg"
-          alt=""
-          width={400}
-          height={100}
-          className="absolute left-1/2 -translate-x-1/2 top-12 pl-4"
+        <BackButton />
+        <ProgressBar
+          className="bg-[#FAC821] border-[#F19C25]"
+          icon={<TinyFish />}
+          progress={50}
         />
       </div>
+      <section className="flex flex-col gap-5 items-center overflow-y-scroll h-full w-full px-5 py-10 pt-20 ">
+        <div className="relative flex justify-center items-center">
+          <Image src="/book-sky.svg" alt="" width={300} height={200} />
+          <p className="absolute right-2 p-4 text-sm font-[600] text-white max-w-[200px]">
+            میدونی ترکیب رنگ زرد و قرمز چه رنگی میشه؟ رنگ رو انتخابش کن
+          </p>
+        </div>
+        <div className=" grid grid-cols-2 gap-4">
+          <Vectorpaper />
+          <Vectorpaper />
+        </div>
+      </section>
     </div>
   );
 }
