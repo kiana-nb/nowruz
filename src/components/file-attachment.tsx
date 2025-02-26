@@ -12,6 +12,7 @@ import IconImage from "@/icons/image";
 import IconVideo from "@/icons/video";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import { JSX } from "react";
 import { createPortal } from "react-dom";
 
 type ButtonProps = {
@@ -32,7 +33,7 @@ const Button = ({ onClick, icon: Icon, label }: ButtonProps) => (
 
 export default function FileAttachment() {
   const { modalRef, isOpen, setIsOpen } = useModal<HTMLDivElement>();
-  const { inputRef, openFileDialog, handleFileChange, files } = useUploadFile();
+  const { inputRef, openFileDialog, handleFileChange, files, setFiles } = useUploadFile();
   const { capturedImage, captureImage } = useCaptureImage();
   const { capturedVideo, captureVideo } = useCaptureVideo();
 
@@ -79,6 +80,7 @@ export default function FileAttachment() {
 
                 {files.length > 0 && (
                   <button
+                    onClick={() => {setFiles([]); setIsOpen(false)}}
                     className="p-3 px-6 mt-6 max-w-[300px] flex gap-2 w-max items-center bg-[#FAC821] text-white text-sm font-semibold rounded-[20px] border-b-4 border-[#F19C25] shadow-[inset_3px_3px_4px_0px_#FFFFFF26,inset_0px_-1px_4px_0px_#00000026]"
                   >
                     <span>ارسال فایل‌ها</span>
@@ -114,12 +116,18 @@ function FileList({ files }: FileListProps) {
   );
 }
 
+const fileRenderers: Record<string, (file: FileItemProps["file"]) => JSX.Element> = {
+  image: (file) => <ImageFile src={file.previewUrl || ""} alt="Uploaded Image" />,
+  video: (file) => <VideoFile src={file.previewUrl || ""} />,
+  default: (file) => <FileLink file={file.file} />,
+};
+
 function FileItem({ file }: FileItemProps) {
+  const Renderer = fileRenderers[file.type] || fileRenderers.default;
+
   return (
     <div className="flex items-center p-2 gap-2 border-b pb-2 mb-2 last:border-none">
-      {file.type === "image" && <ImageFile src={file.previewUrl || ""} alt="Uploaded Image" />}
-      {file.type === "video" && <VideoFile src={file.previewUrl || ""} />}
-      {file.type !== "image" && file.type !== "video" && <FileLink file={file.file} />}
+      <Renderer {...file} />
       <span className="text-sm truncate self-start mt-1">{file.file.name}</span>
     </div>
   );

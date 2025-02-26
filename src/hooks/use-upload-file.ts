@@ -35,5 +35,6 @@ export const useUploadFile = () => {
     openFileDialog,
     handleFileChange,
     files, // List of files with their preview and type
+    setFiles
   };
 };
