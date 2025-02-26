@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
-import { Pause, Play } from "iconsax-react";
-import React, { Component } from "react";
+import IconPause from "@/icons/pause";
+import IconPlay from "@/icons/play";
+import { Component } from "react";
 import WaveSurfer from "wavesurfer.js";
 
 type MyProps = {
@@ -28,11 +29,11 @@ class WaveSurferAudioRecord extends Component<MyProps> {
       cursorWidth: 0,
       backend: "WebAudio",
       height: 10,
-      progressColor: "#3f6212",
+      progressColor: "#4385DB",
       url: this.props.url,
       barHeight: 5,
       hideScrollbar: true,
-      waveColor: "#ACBEC6",
+      waveColor: "#C1C1C1",
       minPxPerSec: 20,
       normalize: true,
       barGap: 3,
@@ -49,11 +50,11 @@ class WaveSurferAudioRecord extends Component<MyProps> {
         cursorWidth: 0,
         backend: "WebAudio",
         height: 40,
-        progressColor: "#3b82f6",
+        progressColor: "#4385DB",
         url: this.props.url,
         barHeight: 2,
         hideScrollbar: true,
-        waveColor: "#3b82f6",
+        waveColor: "#4385DB",
         minPxPerSec: 20,
         normalize: true,
         barGap: 3,
@@ -73,15 +74,19 @@ class WaveSurferAudioRecord extends Component<MyProps> {
 
   render() {
     return (
-      <div className={`${this?.props?.className} max-w-[200px] flex flex-row-reverse gap-2 items-center py-2 px-2 justify-center bg-blue-500 rounded-full`}>
-        <div onClick={this.handlePlay}>
-          {this.state.playing ? <Pause variant="Bold" size="16" color="white" /> : <Play variant="Bold" size="20" color="white" />}
+      <div className={`${this?.props?.className} flex flex-row gap-2 items-center justify-center`}>
+        <div
+          onClick={this.handlePlay}
+          className="w-[56px] h-[46px] min-w-[56px] rounded-[20px] shadow-[inset_3px_3px_4px_0px_#FFFFFF26,inset_0px_-1px_4px_0px_#00000026]
+ bprder-[3px] border-[#C1C1C1] bg-white flex justify-center items-center text-[#FAC821]"
+        >
+          {this.state.playing ? <IconPause/> : <IconPlay/>}
         </div>
 
         <div dir="ltr" className="flex-grow overflow-hidden text-center" id={`${this.props.selector}`}></div>
 
         {this.props?.duration && (
-          <div className="text-xs text-white font-light flex justify-start w-max h-full mt-0.5 items-center mr-3">
+          <div className="text-xs hidden text-white font-light justify-start w-max h-full mt-0.5 items-center mr-3">
             <span>{this.props.duration}</span>
           </div>
         )}
