@@ -120,13 +120,13 @@ function FileItem({ file }: FileItemProps) {
       {file.type === "image" && <ImageFile src={file.previewUrl || ""} alt="Uploaded Image" />}
       {file.type === "video" && <VideoFile src={file.previewUrl || ""} />}
       {file.type !== "image" && file.type !== "video" && <FileLink file={file.file} />}
-      <span className="text-sm truncate">{file.file.name}</span>
+      <span className="text-sm truncate self-start mt-1">{file.file.name}</span>
     </div>
   );
 }
 
 function ImageFile({ src, alt }: { src: string; alt: string }) {
-  return <Image src={src} width={50} height={50} alt={alt} className="rounded-md" />;
+  return <Image src={src} width={50} height={50} alt={alt} className="rounded-md aspect-square object-cover" />;
 }
 
 function VideoFile({ src }: { src: string }) {
