@@ -7,7 +7,7 @@ import Task3 from "./_components/task3";
 
 export default function page() {
   return (
-    <div className="bg-[url('/watercolor-bg2.svg')] w-full px-5 py-6 flex gap-12 flex-col items-center justify-center overflow-y-scroll h-dvh bg-no-repeat bg-cover relative overflow-hidden">
+    <div className="bg-[url('/watercolor-bg2.svg')] w-full px-5 py-6 flex gap-12 flex-col items-center justify-center overflow-y-scroll min-h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <BackButton className="absolute top-4 right-4" />
       <DayBanner />
 

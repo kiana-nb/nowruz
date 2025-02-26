@@ -5,9 +5,9 @@ import Day2 from "./_components/day2";
 
 export default function page() {
   return (
-    <div className="bg-[url('/watercolor-bg1.svg')] w-screen h-dvh bg-no-repeat bg-cover relative overflow-hidden">
+    <div className="bg-[url('/watercolor-bg1.svg')] w-screen min-h-dvh bg-no-repeat bg-cover relative overflow-hidden">
       <VectorFlowerBorder className="absolute bottom-0 -right-7" />
-
+      
       <div className="overflow-y-scroll h-full w-full px-5 py-10 gap-20 flex flex-col">
         <BannerCard />
         <section className="flex flex-col gap-4">
