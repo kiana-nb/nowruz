@@ -2,11 +2,18 @@ import React, { SVGProps } from "react";
 
 export default function VectorHugeGarlic(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg {...props } width="113" height="126" viewBox="0 0 113 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      {...props}
+      width="113"
+      height="126"
+      viewBox="0 0 113 126"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M68.5 126C89.763 126 107 119.956 107 112.5C107 105.044 89.763 99 68.5 99C47.237 99 30 105.044 30 112.5C30 119.956 47.237 126 68.5 126Z"
         fill="url(#paint0_radial_68_409)"
-        fill-opacity="0.5"
+        fillOpacity="0.5"
       />
       <path
         d="M71.3396 113.885C70.5953 115.018 69.9348 116.206 69.3655 117.436C68.8709 118.504 68.4889 119.499 68.3226 120.644C67.9697 123.073 65.6835 120.94 64.8548 120.069C63.4184 118.56 62.2934 116.753 61.5862 114.793C60.9303 112.974 60.4027 109.344 62.722 108.472C63.8889 108.033 65.1993 107.987 66.4313 107.931C67.8776 107.865 69.3566 108.049 70.7302 108.512C71.3092 108.708 73.8608 109.655 73.87 110.356C73.8729 110.586 73.7103 110.782 73.559 110.956C72.7541 111.88 72.0125 112.86 71.3396 113.885Z"
@@ -117,49 +124,112 @@ export default function VectorHugeGarlic(props: SVGProps<SVGSVGElement>) {
         fill="#FDF5DA"
       />
       <defs>
-        <radialGradient id="paint0_radial_68_409" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(68.501 112.631) rotate(87.8623) scale(13.3783 36.8803)">
-          <stop stop-color="#404040" />
-          <stop offset="0.995" stop-color="#BC9091" stop-opacity="0" />
+        <radialGradient
+          id="paint0_radial_68_409"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(68.501 112.631) rotate(87.8623) scale(13.3783 36.8803)"
+        >
+          <stop stopColor="#404040" />
+          <stop offset="0.995" stopColor="#BC9091" stopOpacity="0" />
         </radialGradient>
-        <radialGradient id="paint1_radial_68_409" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(67.7345 20.1934) scale(21.9136 21.9136)">
-          <stop stop-color="#C5CD53" />
-          <stop offset="1" stop-color="#77AF33" />
+        <radialGradient
+          id="paint1_radial_68_409"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(67.7345 20.1934) scale(21.9136 21.9136)"
+        >
+          <stop stopColor="#C5CD53" />
+          <stop offset="1" stopColor="#77AF33" />
         </radialGradient>
-        <radialGradient id="paint2_radial_68_409" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.43115 84.6077) scale(10.2033 10.2033)">
-          <stop stop-color="#FDF5DA" />
-          <stop offset="1" stop-color="#E3B7AD" />
+        <radialGradient
+          id="paint2_radial_68_409"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(4.43115 84.6077) scale(10.2033 10.2033)"
+        >
+          <stop stopColor="#FDF5DA" />
+          <stop offset="1" stopColor="#E3B7AD" />
         </radialGradient>
-        <linearGradient id="paint3_linear_68_409" x1="57.3168" y1="74.744" x2="111.634" y2="74.744" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FDF5DA" />
-          <stop offset="0.995" stop-color="#E3B7AD" />
-          <stop offset="1" stop-color="#E3B7AD" />
+        <linearGradient
+          id="paint3_linear_68_409"
+          x1="57.3168"
+          y1="74.744"
+          x2="111.634"
+          y2="74.744"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FDF5DA" />
+          <stop offset="0.995" stopColor="#E3B7AD" />
+          <stop offset="1" stopColor="#E3B7AD" />
         </linearGradient>
-        <linearGradient id="paint4_linear_68_409" x1="42.9086" y1="107.062" x2="53.2681" y2="40.8943" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C7A99F" />
-          <stop offset="0.995" stop-color="#E5C9A5" />
-          <stop offset="1" stop-color="#E5C9A5" />
+        <linearGradient
+          id="paint4_linear_68_409"
+          x1="42.9086"
+          y1="107.062"
+          x2="53.2681"
+          y2="40.8943"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C7A99F" />
+          <stop offset="0.995" stopColor="#E5C9A5" />
+          <stop offset="1" stopColor="#E5C9A5" />
         </linearGradient>
-        <linearGradient id="paint5_linear_68_409" x1="32.3474" y1="105.41" x2="42.7069" y2="39.2424" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C7A99F" />
-          <stop offset="0.995" stop-color="#E5C9A5" />
-          <stop offset="1" stop-color="#E5C9A5" />
+        <linearGradient
+          id="paint5_linear_68_409"
+          x1="32.3474"
+          y1="105.41"
+          x2="42.7069"
+          y2="39.2424"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C7A99F" />
+          <stop offset="0.995" stopColor="#E5C9A5" />
+          <stop offset="1" stopColor="#E5C9A5" />
         </linearGradient>
-        <linearGradient id="paint6_linear_68_409" x1="62.0722" y1="110.062" x2="72.4317" y2="43.8952" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C7A99F" />
-          <stop offset="0.995" stop-color="#E5C9A5" />
-          <stop offset="1" stop-color="#E5C9A5" />
+        <linearGradient
+          id="paint6_linear_68_409"
+          x1="62.0722"
+          y1="110.062"
+          x2="72.4317"
+          y2="43.8952"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C7A99F" />
+          <stop offset="0.995" stopColor="#E5C9A5" />
+          <stop offset="1" stopColor="#E5C9A5" />
         </linearGradient>
-        <linearGradient id="paint7_linear_68_409" x1="75.9424" y1="112.236" x2="86.3019" y2="46.0685" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C7A99F" />
-          <stop offset="0.995" stop-color="#E5C9A5" />
-          <stop offset="1" stop-color="#E5C9A5" />
+        <linearGradient
+          id="paint7_linear_68_409"
+          x1="75.9424"
+          y1="112.236"
+          x2="86.3019"
+          y2="46.0685"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C7A99F" />
+          <stop offset="0.995" stopColor="#E5C9A5" />
+          <stop offset="1" stopColor="#E5C9A5" />
         </linearGradient>
-        <linearGradient id="paint8_linear_68_409" x1="85.085" y1="108.812" x2="94.7057" y2="47.3637" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#C7A99F" />
-          <stop offset="0.995" stop-color="#E5C9A5" />
-          <stop offset="1" stop-color="#E5C9A5" />
+        <linearGradient
+          id="paint8_linear_68_409"
+          x1="85.085"
+          y1="108.812"
+          x2="94.7057"
+          y2="47.3637"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#C7A99F" />
+          <stop offset="0.995" stopColor="#E5C9A5" />
+          <stop offset="1" stopColor="#E5C9A5" />
         </linearGradient>
       </defs>
     </svg>
-  )
+  );
 }
