@@ -11,10 +11,12 @@ import Coins from "./_components/coins";
 import Grass from "./_components/grass";
 import HyacinthFlower from "./_components/hyacinth-flower";
 import Garlic from "./_components/garlic";
+import New from "./_components/new";
 
 function page() {
   return (
     <div>
+      <New />
       <Eggs />
       <Mirror />
       <Garlic />
